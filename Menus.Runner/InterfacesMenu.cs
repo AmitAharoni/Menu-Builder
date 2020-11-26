@@ -8,7 +8,7 @@ namespace Menus.Runner
      {
           internal static void CreateInterfacesMenuForTest(MainMenu i_Menu)
           {
-               CountCapital count = new CountCapital();
+               CountCapital count = new CountCapital(); 
                MenuItem CountCapital = new Menu.Interfaces.MenuItem("Count Capital", count, i_Menu);
                ShowVersion version = new ShowVersion();
                Menu.Interfaces.MenuItem ShowVersion = new Menu.Interfaces.MenuItem("Show Version", version, i_Menu);
