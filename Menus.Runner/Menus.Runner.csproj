@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ADF005B6-39ED-4019-95B2-7FB5A2743E2D}</ProjectGuid>
+    <ProjectGuid>{5A2CE697-741D-450B-928D-208315387E36}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Menu_Builder</RootNamespace>
-    <AssemblyName>Menu Builder</AssemblyName>
+    <RootNamespace>Menus.Runner</RootNamespace>
+    <AssemblyName>Menus.Runner</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,8 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DelegatesMenu.cs" />
+    <Compile Include="InterfacesMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Menu.Interfaces\Menu.Interfaces.csproj">
+      <Project>{f1c89537-d19b-4b68-b4b8-a0a0d3d58a2b}</Project>
+      <Name>Menu.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Menus.Delegates\Menus.Delegates.csproj">
+      <Project>{f1993019-4314-4396-80aa-247284b55dd2}</Project>
+      <Name>Menus.Delegates</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
